@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Big Bang and Beyond</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle, #000 0%, #111 100%);
+      color: white;
+      scroll-behavior: smooth;
+      padding-top: 8rem;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(180deg, #000 0%, #222 100%);
+      text-align: center;
+      padding: 2.5rem 1rem 1.5rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+      transform: translateY(-100%);
+      transition: transform 0.4s ease;
+      pointer-events: none;
+    }
+
+    header.show {
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      animation: fadeIn 2s ease-out;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #aaa;
+      animation: fadeIn 3s ease-out;
+    }
+
+    nav {
+      position: fixed;
+      top: 5rem;
+      left: 0;
+      right: 0;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0;
+      transform: translateY(-100%);
+      transition: transform 0.4s ease;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    nav.show {
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    nav a {
+      color: #ffcc00;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffff66;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 4rem auto 6rem;
+      padding: 0 1.5rem;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section h2 {
+      font-size: 2.3rem;
+      margin-bottom: 1.5rem;
+      color: #ffcc00;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    section .note {
+      font-size: 0.9rem;
+      color: #89c4f4;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    section img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 2rem;
+      border: 2px solid #444;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <h1>The Big Bang and Beyond</h1>
+    <p>Tracing the Origins and Evolution of Our Universe</p>
+  </header>
+
+  <nav id="navbar">
+    <a href="#preface">Preface</a>
+    <a href="#birth">宇宙誕生</a>
+    <a href="#inflation">インフレーション</a>
+    <a href="#particles">素粒子</a>
+    <a href="#nucleosynthesis">核合成</a>
+    <a href="#cmb">背景放射</a>
+    <a href="#darkage">暗黒時代</a>
+    <a href="#firststars">初期星</a>
+    <a href="#galaxy">銀河</a>
+    <a href="#expansion">膨張</a>
+    <a href="#future">未来</a>
+  </nav>
+
+  <section id="preface">
+    <h2>Preface</h2>
+    <p>
+      このWebサイトでは、ビッグバンから現在、そして未来までの宇宙の進化を詳しくたどります。<br>
+      各セクションをスクロールして、宇宙誕生の瞬間から銀河形成までの壮大な旅にご案内します。
+    </p>
+  </section>
+
+  <section id="birth">
+    <h2>1. 宇宙誕生の瞬間</h2>
+    <p>
+      約138億年前、宇宙は無限に小さく高温・高密度の状態から急激に膨張を始めました。<br>
+      この瞬間を「ビッグバン」と呼びます。時間と空間がここから始まり、自然法則もこのときに成立しました。
+    </p>
+    <p class="note">※インフレーション理論によれば、誕生直後の宇宙は指数関数的に膨張したとされます。</p>
+    <img src="images/bigbang.jpg" alt="The Big Bang illustration" />
+  </section>
+
+  <section id="inflation">
+    <h2>2. インフレーション</h2>
+    <p>
+      ビッグバン直後の約10^-36秒から10^-32秒の間、宇宙は極めて短時間に指数関数的に膨張しました。<br>
+      この膨張は「インフレーション」と呼ばれ、宇宙の均一性や平坦性の説明に重要です。
+    </p>
+    <p class="note">※インフレーションにより、宇宙の初期の微小なゆらぎが現在の大規模構造の種となりました。</p>
+    <img src="images/inflation.jpg" alt="Inflation period illustration" />
+  </section>
+
+  <section id="particles">
+    <h2>3. 素粒子時代</h2>
+    <p>
+      インフレーション後、宇宙は高温・高密度の状態で、多種多様な素粒子が生成・消滅を繰り返しました。<br>
+      この時代にはクォーク、レプトン、ゲージボソンなどが重要な役割を果たしました。
+    </p>
+    <p class="note">※粒子物理学の標準模型が、これら素粒子の性質を説明しています。</p>
+    <img src="images/particles.jpg" alt="Particles in early universe" />
+  </section>
+
+  <section id="nucleosynthesis">
+    <h2>4. 原子核合成</h2>
+    <p>
+      ビッグバンから数分後、温度が下がり始めると陽子と中性子が結合し、軽い元素の原子核（主に水素の同位体、ヘリウム、リチウム）が形成されました。<br>
+      これを「ビッグバン元素合成」と呼びます。
+    </p>
+    <p class="note">※元素の初期組成は宇宙の化学進化の基盤となります。</p>
+    <img src="images/nucleosynthesis.jpg" alt="Big Bang nucleosynthesis" />
+  </section>
+
+  <section id="cmb">
+    <h2>5. 宇宙背景放射（CMB）</h2>
+    <p>
+      約38万年後、宇宙の温度が約3000Kまで下がり、電子と陽子が結合して中性水素ができました。<br>
+      これにより光が自由に宇宙を進むことができるようになり、その光が現在の「宇宙マイクロ波背景放射」として観測されています。
+    </p>
+    <p class="note">※CMBの温度揺らぎは、初期の密度ゆらぎを示し、銀河や大規模構造の起源を示しています。</p>
+    <img src="images/cmb.jpg" alt="Cosmic Microwave Background" />
+  </section>
+
+  <section id="darkage">
+    <h2>6. ダークエイジ</h2>
+    <p>
+      宇宙はまだ光を発する星や銀河が形成されておらず、暗黒の時代が続きました。<br>
+      この期間は「ダークエイジ」と呼ばれ、宇宙が静かに冷えていきました。
+    </p>
+    <p class="note">※この時代の宇宙の状態を理解することは、星形成理論にとって重要です。</p>
+    <img src="images/darkage.jpg" alt="Dark Age of the universe" />
+  </section>
+
+  <section id="firststars">
+    <h2>7. 最初の星々の誕生</h2>
+    <p>
+      数億年後、最初の星々（ポピュレーションIII）が形成され始めました。<br>
+      これらの星は金属成分をほとんど含まない非常に重い星で、宇宙の初期化学に大きな影響を与えました。
+    </p>
+    <p class="note">※これらの星の超新星爆発が、次世代の星や銀河の材料となりました。</p>
+    <img src="images/firststars.jpg" alt="First stars in the universe" />
+  </section>
+
+  <section id="galaxy">
+    <h2>8. 銀河の形成と進化</h2>
+    <p>
+      星々が集まり、重力で銀河が形成されました。<br>
+      さまざまなタイプの銀河（楕円銀河、渦巻銀河など）が存在し、宇宙の大規模構造を形作っています。
+    </p>
+    <p class="note">※銀河の衝突や合体が宇宙の進化に重要な役割を果たしています。</p>
+    <img src="images/galaxy.jpg" alt="Galaxies in universe" />
+  </section>
+
+  <section id="expansion">
+    <h2>9. 宇宙の膨張と加速</h2>
+    <p>
+      宇宙は現在も膨張を続けており、その膨張速度は加速しています。<br>
+      この加速膨張の原因は「ダークエネルギー」と呼ばれ、宇宙の未来を左右する大きな謎です。
+    </p>
+    <p class="note">※遠方銀河の赤方偏移観測から、宇宙の膨張加速が初めて発見されました。</p>
+    <img src="images/expansion.jpg" alt="Expanding Universe diagram" />
+  </section>
+
+  <section id="future">
+    <h2>10. 宇宙の未来予測</h2>
+    <p>
+      現在の観測と理論に基づき、宇宙の未来は複数のシナリオが考えられています。<br>
+      宇宙が永遠に膨張し続ける「ビッグフリーズ」や、収縮して終わる「ビッグクランチ」などです。
+    </p>
+    <p class="note">※新たな観測や理論が宇宙の未来予測を変える可能性があります。</p>
+    <img src="images/future.jpg" alt="Future scenarios of the universe" />
+  </section>
+
+  <footer>
+    <p>Created by [Itsuki] | Images from NASA, ESA, Planck Collaboration</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
+
+    const nav = document.getElementById('navbar');
+    const header = document.getElementById('header');
+    let lastScrollY = window.scrollY;
+
+    header.classList.remove('show');
+    nav.classList.remove('show');
+
+    function showTopBars() {
+      header.classList.add('show');
+      nav.classList.add('show');
+    }
+
+    function hideTopBars() {
+      header.classList.remove('show');
+      nav.classList.remove('show');
+    }
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY < 50 || currentScrollY < lastScrollY) {
+        showTopBars();
+      } else {
+        hideTopBars();
+      }
+
+      lastScrollY = currentScrollY;
+    });
+
+    window.addEventListener('mousemove', e => {
+      if (e.clientY < 50) {
+        showTopBars();
+      }
+    });
+  </script>
+</body>
+</html>
